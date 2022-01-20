@@ -77,7 +77,6 @@ const optimizeImages = () => {
           { removeViewBox: false }
       ]
     }))
-    // .pipe(gulp.dest("build/img"))
     .pipe(gulp.dest("dist/img"))
 }
 
@@ -85,7 +84,6 @@ exports.images = optimizeImages;
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-    // .pipe(gulp.dest("build/img"))
     .pipe(gulp.dest("dist/img"))
 }
 
@@ -96,7 +94,6 @@ exports.images = copyImages;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    // .pipe(gulp.dest("build/img"))
     .pipe(gulp.dest("dist/img"))
 }
 
@@ -110,7 +107,6 @@ const sprite = () => {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    // .pipe(gulp.dest("build/img"));
     .pipe(gulp.dest("dist/img"));
 }
 
@@ -127,7 +123,6 @@ const copy = (done) => {
   ], {
     base: "source"
   })
-    // .pipe(gulp.dest("build"))
     .pipe(gulp.dest("dist"))
   done();
 }
@@ -137,7 +132,6 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  // return del("build");
   return del("dist");
 };
 
@@ -146,7 +140,6 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      // baseDir: "build"
       baseDir: "dist"
     },
     host: "192.168.1.71",
@@ -170,8 +163,6 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  // gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  // gulp.watch("source/*.html").on("change", sync.reload);
   gulp.watch("source/sass/**/*.scss", gulp.series(styles, reload));
   gulp.watch("source/js/**/*.js", gulp.series(scripts, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));

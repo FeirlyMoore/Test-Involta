@@ -1,7 +1,7 @@
 {
-  "name": "cat-energy-23",
+  "name": "Test-Involta",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "<!DOCTYPE Liky>",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.3.1",
@@ -17,7 +17,7 @@
     "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "3.0.0",
     "gulp-svgstore": "8.0.0",
-    "gulp-terser": "2.0.1",
+    "gulp-terser": "^2.1.0",
     "gulp-webp": "4.0.1",
     "postcss": "8.3.6",
     "postcss-csso": "5.0.1",
