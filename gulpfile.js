@@ -7,12 +7,10 @@ const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const rename = require('gulp-rename');
 const htmlmin = require('gulp-htmlmin');
-// const terser = require('gulp-terser');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
-// const fileinclude = require('gulp-file-include');
 const sync = require('browser-sync').create();
 
 // Styles
@@ -52,12 +50,7 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
-    // .pipe(fileinclude({
-    //   prefix: '@@',
-    //   basepath: '@file'
-    // }))
     .pipe(gulp.dest("dist/js"))
-    // .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("docs/js"))
     .pipe(gulp.dest("dist/js"))
@@ -121,7 +114,7 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
-    "source/fonts/*.{woff2,woff}",
+    "source/fonts/*.{woff2,woff,ttf}",
     "source/*.ico",
     "source/img/**/*.svg",
     "!source/img/icons/*.svg",
@@ -191,24 +184,6 @@ const build = gulp.series(
 );
 
 exports.build = build;
-
-// const dist = gulp.series(
-//   clean,
-//   copy,
-//   optimizeImages,
-//   gulp.parallel(
-//     styles,
-//     html,
-//     scripts,
-//     sprite,
-//     createWebp
-//   ),
-// );
-
-// exports.dist = dist;
-
-// Default
-
 
 exports.default = gulp.series(
   clean,
