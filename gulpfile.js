@@ -62,7 +62,7 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg,webp,avif}")
     .pipe(imagemin({
       interlaced: false,
       progressive: false,
@@ -78,7 +78,7 @@ const optimizeImages = () => {
 exports.images = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg,webp,avif}")
     .pipe(gulp.dest("docs/img"))
     .pipe(gulp.dest("dist/img"))
 }
