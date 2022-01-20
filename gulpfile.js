@@ -22,7 +22,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    // .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(gulp.dest("dist/css"))
     .pipe(gulp.dest("source/css"))
     .pipe(postcss([
@@ -31,7 +31,7 @@ const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    // .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(gulp.dest("dist/css"))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
@@ -44,7 +44,7 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    // .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"))
     .pipe(gulp.dest("dist"));
 }
 
@@ -59,6 +59,7 @@ const scripts = () => {
     .pipe(gulp.dest("dist/js"))
     // .pipe(terser())
     .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("docs/js"))
     .pipe(gulp.dest("dist/js"))
     .pipe(sync.stream());
 }
@@ -77,6 +78,7 @@ const optimizeImages = () => {
           { removeViewBox: false }
       ]
     }))
+    .pipe(gulp.dest("docs/img"))
     .pipe(gulp.dest("dist/img"))
 }
 
@@ -84,6 +86,7 @@ exports.images = optimizeImages;
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(gulp.dest("docs/img"))
     .pipe(gulp.dest("dist/img"))
 }
 
@@ -94,6 +97,7 @@ exports.images = copyImages;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("docs/img"))
     .pipe(gulp.dest("dist/img"))
 }
 
@@ -107,6 +111,7 @@ const sprite = () => {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("docs/img"))
     .pipe(gulp.dest("dist/img"));
 }
 
@@ -123,6 +128,7 @@ const copy = (done) => {
   ], {
     base: "source"
   })
+    .pipe(gulp.dest("docs"))
     .pipe(gulp.dest("dist"))
   done();
 }
@@ -132,6 +138,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
+  return del("docs");
   return del("dist");
 };
 
