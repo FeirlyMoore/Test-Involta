@@ -3,7 +3,6 @@
 @import "global/fonts.scss";
 
 /* Global */
-
 @import "global/variables.scss";
 @import "global/normalize";
 @import "global/mixins.scss";
@@ -16,11 +15,8 @@
 
 /* Blocks */
 
-//Header
-// @import "blocks/header/header.scss";
-
 // index
-// @import "blocks/";
+@import "blocks/news-block-wrapper.scss";
 
 // Footer
 // @import "blocks/footer/footer.scss";

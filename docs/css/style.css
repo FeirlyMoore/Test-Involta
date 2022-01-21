@@ -334,8 +334,7 @@ template {
 .page {
   min-height: 100%;
   font-size: 10px;
-  font-family: "Oswald Regular", "Arial", sans-serif;
-  line-height: 27px; }
+  font-family: "Oswald Regular", "Arial", sans-serif; }
 
 .body {
   min-height: 100%;
@@ -343,41 +342,6 @@ template {
   padding: 0;
   background-color: #ffffff;
   color: #000000; }
-
-.main-title {
-  font-family: "Oswald Regular", "Arial", sans-serif;
-  font-size: 36px;
-  line-height: 60px;
-  font-weight: 400;
-  color: #111111;
-  pointer-events: none;
-  margin: 0 auto 28px;
-  padding: 14px 20px 0;
-  border-top: 1px solid #e6e6e6; }
-  @media (min-width: 768px) {
-    .main-title {
-      font-size: 60px;
-      line-height: 60px;
-      margin-bottom: 163px;
-      padding: 30px 30px 0;
-      border-top: none; } }
-  @media (min-width: 1200px) {
-    .main-title {
-      padding: 60px 110px 0;
-      margin-bottom: 165px; } }
-
-@media (min-width: 768px) {
-  .main-title--form {
-    font-size: 60px;
-    line-height: 60px;
-    margin-bottom: 55px;
-    padding: 30px 70px 0;
-    border-top: none; } }
-
-@media (min-width: 1200px) {
-  .main-title--form {
-    padding: 60px 110px 0;
-    margin-bottom: 73px; } }
 
 .hidden {
   display: none; }
@@ -414,38 +378,27 @@ template {
     .desktop-visible {
       display: initial; } }
 
-.animation-scale {
-  animation: animation-scale var(--animation-duration, 1s) ease; }
-
-@keyframes animation-scale {
-  0% {
-    transform: scale(0); }
-  100% {
-    transform: scale(1); } }
-
-.animation-position {
-  position: relative;
-  animation: animation-position 1s ease; }
-
-@media (min-width: 320px) {
-  @keyframes animation-position {
-    0% {
-      left: 50%; }
-    100% {
-      left: 0; } } }
-
-@media (min-width: 768px) {
-  @keyframes animation-position {
-    0% {
-      left: 50%; }
-    100% {
-      left: 30px; } } }
-
-@media (min-width: 1200px) {
-  @keyframes animation-position {
-    0% {
-      left: 50%; }
-    100% {
-      left: 0; } } }
-
 /* Blocks */
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: grid;
+  width: 80%;
+  margin-top: 50vh;
+  padding: 5em 0 0;
+  grid-template-columns: 1fr/1;
+  grid-template-rows: 1fr/auto; }
+  @media (min-width: 768px) {
+    .wrapper {
+      grid-template-columns: 1fr/2; } }
+
+.news-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #222222; }

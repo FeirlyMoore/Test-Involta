@@ -6,7 +6,7 @@
   min-height: 100%;
   font-size: 10px;
   font-family: "Oswald Regular", "Arial", sans-serif;
-  line-height: 27px;
+  // line-height: 27px;
 }
 
 .body {
@@ -15,46 +15,6 @@
   padding: 0;
   background-color: $main-color;
   color: $black-color;
-}
-
-.main-title {
-  font-family: "Oswald Regular", "Arial", sans-serif;
-  font-size: 36px;
-  line-height: 60px;
-  font-weight: 400;
-  color: $pre-black-color;
-  pointer-events: none;
-  margin: 0 auto 28px;
-  padding: 14px 20px 0;
-  border-top: 1px solid $light-gray-border;
-
-  @media (min-width: $tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
-    margin-bottom: 163px;
-    padding: 30px 30px 0;
-    border-top: none;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 60px 110px 0;
-    margin-bottom: 165px;
-  }
-}
-
-.main-title--form {
-  @media (min-width: $tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
-    margin-bottom: 55px;
-    padding: 30px 70px 0;
-    border-top: none;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 60px 110px 0;
-    margin-bottom: 73px;
-  }
 }
 
 .hidden {
@@ -99,62 +59,6 @@
 
   @media (min-width: $desktop-width) {
     display: initial;
-  }
-}
-
-.animation-scale {
-  animation: animation-scale var(--animation-duration, 1s) ease;
-}
-
-@keyframes animation-scale {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-
-.animation-position {
-  position: relative;
-  animation: animation-position 1s ease;
-}
-
-@media (min-width: $mobile-width) {
-  @keyframes animation-position {
-    0% {
-      left: 50%;
-    }
-
-    100% {
-      left: 0;
-    }
-  }
-}
-
-@media (min-width: $tablet-width) {
-  @keyframes animation-position {
-    0% {
-      left: 50%;
-    }
-
-    100% {
-      left: 30px;
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  @keyframes animation-position {
-    0% {
-      left: 50%;
-    }
-
-    100% {
-      left: 0;
-    }
   }
 }
 
