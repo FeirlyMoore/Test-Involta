@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Fonts */
 @font-face {
   font-family: 'Philosopher-Regular';
@@ -326,6 +327,33 @@ template {
 [hidden] {
   display: none; }
 
+/* Слайдер */
+.slick-slider {
+  min-width: 0; }
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden; }
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start; }
+
+/* Слайд */
+/* Слайд активный */
+/* Слайд основной */
+/* Слайд по центру */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки */
+/* Конкретный слайдер */
+.slider {
+  position: relative;
+  padding: 0px 60px; }
+
 ::selection {
   background-color: rgba(255, 69, 0, 0.8); }
 
@@ -387,11 +415,11 @@ template {
   width: 80%;
   margin-top: 50vh;
   padding: 5em 0 0;
-  grid-template-columns: 1fr/1;
-  grid-template-rows: 1fr/auto; }
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 1fr); }
   @media (min-width: 768px) {
     .wrapper {
-      grid-template-columns: 1fr/2; } }
+      grid-template-columns: repeat(2, 1fr); } }
 
 .news-block::before {
   content: "";

@@ -4,11 +4,11 @@
   width: 80%;
   margin-top: 50vh;
   padding: 5em 0 0;
-  grid-template-columns: 1fr/1;
-  grid-template-rows: 1fr/auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 1fr);
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr/2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
