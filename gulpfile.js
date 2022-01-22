@@ -50,6 +50,7 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
+    .pipe(gulp.dest("docs/js"))
     .pipe(gulp.dest("dist/js"))
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("docs/js"))
@@ -114,6 +115,7 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
+    "source/js/partial/*.js",
     "source/fonts/*.{woff2,woff,ttf}",
     "source/*.{ico,png}",
     "source/img/**/*.svg",
