@@ -417,12 +417,13 @@ template {
   @media (min-width: 1040px) {
     .wrapper {
       display: grid;
+      width: 80%;
       grid-template-columns: repeat(3, 280px);
       justify-content: space-between;
       grid-row-gap: 4em; } }
   @media (min-width: 1200px) {
     .wrapper {
-      grid-template-columns: repeat(4, 280px); } }
+      grid-template-columns: repeat(4, 240px); } }
 
 .wrapper > .slick-list > .slick-track {
   position: relative;
@@ -441,5 +442,11 @@ template {
   box-sizing: border-box; }
 
 .news {
-  width: 280px;
+  width: 240px;
   overflow: hidden; }
+  @media (min-width: 1040px) {
+    .news {
+      width: 280px; } }
+  @media (min-width: 1200px) {
+    .news {
+      width: 240px; } }

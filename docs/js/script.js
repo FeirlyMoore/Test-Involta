@@ -11,8 +11,12 @@ $(document).ready(function(){
     responsive: [
         // При разрешении до 10 000 пикселов
         {
-          breakpoint: 10000,
-          settings: "unslick"
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: false
+          }
         },
         // При разрешении до 1039 пикселов
         {
@@ -25,12 +29,9 @@ $(document).ready(function(){
         },
         // При разрешении до 767 пикселов
         {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            variableWidth: false
-          }
+          breakpoint: 10000,
+          settings: "unslick"
+          
         },
     ]
   });

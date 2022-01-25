@@ -10,6 +10,7 @@
 
   @media (min-width: $big-tablet-width) {
     display: grid;
+    width: 80%;
     // grid-template-columns: repeat(3, 1fr);
     // grid-template-rows: repeat(auto, 1fr);
     grid-template-columns: repeat(3, 280px);
@@ -18,7 +19,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 280px);
+    grid-template-columns: repeat(4, 240px);
   }
 }
 
@@ -39,8 +40,16 @@
 }
 
 .news {
-  width: 280px;
+  width: 240px;
   overflow: hidden;
+
+  @media (min-width: $big-tablet-width) {
+    width: 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 240px;
+  }
 }
 
 //<!DOCTYPE Liky>
