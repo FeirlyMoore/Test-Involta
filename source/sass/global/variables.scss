@@ -10,10 +10,12 @@ $mobile-width-only: 767px;
 $main-color: #ffffff;
 $special_dark-grey-2: #222222;
 $black-color: #000000;
+$special_red-color: rgb(178, 84, 79);
+$icon-color: rgb(113, 113, 113);
 
 /* Fonts */
-$font-stack--Oswald-Regular:"Oswald Regular", "Arial", sans-serif;
-$font-stack--Oswald-Medium:"Oswald Medium", "Arial", sans-serif;
+$font-stack--Philosopher:"Philosopher", "Arial", sans-serif;
+$font-stack--NotoSerif-Regular:"NotoSerif-Regular", "Arial", sans-serif;
 
 /*
 @media (min-width: $tablet-width) {}

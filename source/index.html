@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-	<head>
+  <head>
     <!-- Character Sets -->
-		<meta charset="utf-8"/>
-		<!-- Viewport -->
+    <meta charset="utf-8"/>
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-		<!-- Favicons -->
+    <!-- Favicons -->
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-		<!-- Description && Keywords -->
-		<meta name="description" content="Стандартный модуль новостей на любом информационном портале.
+    <!-- Description && Keywords -->
+    <meta name="description" content="Стандартный модуль новостей на любом информационном портале.
     Модуль позволяет пользователям любых устройств в удобном виде ознакомиться с актуальными новостями и объявлениями"/>
-		<meta name="keywords" content="News Module, News, Module"/>
-		<!-- Preload && Other -->
+    <meta name="keywords" content="News Module, News, Module"/>
+    <!-- Preload && Other -->
     <link rel="preload" href="fonts/Philosopher-Regular.ttf" as="font"/>
     <link rel="preload" href="fonts/NotoSerif-Regular.ttf" as="font"/>
-		<!-- styles && Title -->
-		<link rel="stylesheet" href="css/style.css"/>
-		<link rel="stylesheet" href="css/style.min.css"/>
-		<title>Test-Involta > News Module</title>
-	</head>
-	<body class="body">
-		<main class="main">
+    <!-- styles && Title -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>Test-Involta > News Module</title>
+  </head>
+  <body class="body">
+    <main class="main">
       <!-- ===== <Контейнер> ===== -->
       <div class="news-block news-block--js wrapper">
         <!-- >========== Блок Статьи ========== -->
@@ -29,10 +29,12 @@
           <picture>
             <source srcset="img/news/news-block__item-1.avif" type="image/avif">
             <source srcset="img/news/news-block__item-1.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-1.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Конституционное право
           </span>
           <h2 class="news__title">
@@ -48,10 +50,12 @@
           <picture>
             <source srcset="img/news/news-block__item-2.avif" type="image/avif">
             <source srcset="img/news/news-block__item-2.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-2.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Закон и порядок
           </span>
           <h2 class="news__title">
@@ -67,10 +71,12 @@
           <picture>
             <source srcset="img/news/news-block__item-3.avif" type="image/avif">
             <source srcset="img/news/news-block__item-3.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-3.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Этика общения адвокатов
           </span>
           <h2 class="news__title">
@@ -86,10 +92,12 @@
           <picture>
             <source srcset="img/news/news-block__item-4.avif" type="image/avif">
             <source srcset="img/news/news-block__item-4.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-4.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Закон и порядок
           </span>
           <h2 class="news__title">
@@ -104,15 +112,17 @@
             ===============================================================================
             ===============================================================================
          -->
-         <!-- >========== Блок Статьи ========== -->
+        <!-- >========== Блок Статьи ========== -->
         <article class="news-block__item-1 news">
           <picture>
             <source srcset="img/news/news-block__item-1.avif" type="image/avif">
             <source srcset="img/news/news-block__item-1.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-1.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Конституционное право
           </span>
           <h2 class="news__title">
@@ -128,10 +138,12 @@
           <picture>
             <source srcset="img/news/news-block__item-2.avif" type="image/avif">
             <source srcset="img/news/news-block__item-2.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-2.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Закон и порядок
           </span>
           <h2 class="news__title">
@@ -147,10 +159,12 @@
           <picture>
             <source srcset="img/news/news-block__item-3.avif" type="image/avif">
             <source srcset="img/news/news-block__item-3.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-3.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Этика общения адвокатов
           </span>
           <h2 class="news__title">
@@ -166,10 +180,12 @@
           <picture>
             <source srcset="img/news/news-block__item-4.avif" type="image/avif">
             <source srcset="img/news/news-block__item-4.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-4.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Закон и порядок
           </span>
           <h2 class="news__title">
@@ -184,15 +200,17 @@
             ===============================================================================
             ===============================================================================
          -->
-         <!-- >========== Блок Статьи ========== -->
+        <!-- >========== Блок Статьи ========== -->
         <article class="news-block__item-1 news">
           <picture>
             <source srcset="img/news/news-block__item-1.avif" type="image/avif">
             <source srcset="img/news/news-block__item-1.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-1.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Конституционное право
           </span>
           <h2 class="news__title">
@@ -208,10 +226,12 @@
           <picture>
             <source srcset="img/news/news-block__item-2.avif" type="image/avif">
             <source srcset="img/news/news-block__item-2.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-2.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Закон и порядок
           </span>
           <h2 class="news__title">
@@ -227,10 +247,12 @@
           <picture>
             <source srcset="img/news/news-block__item-3.avif" type="image/avif">
             <source srcset="img/news/news-block__item-3.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-3.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Этика общения адвокатов
           </span>
           <h2 class="news__title">
@@ -246,10 +268,12 @@
           <picture>
             <source srcset="img/news/news-block__item-4.avif" type="image/avif">
             <source srcset="img/news/news-block__item-4.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-4.png" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
-            <img class="deco-img" src="img/icons/decorative/page.svg" alt="deco">
+            <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
+              <use xlink:href="img/sprite.svg#page" />
+            </svg>
             Закон и порядок
           </span>
           <h2 class="news__title">
@@ -262,17 +286,17 @@
         </article>
       </div>
       <!-- ===== </Контейнер> ===== -->
-		</main>
-		<footer class="footer">
+    </main>
+    <footer class="footer">
 
-		</footer>
+    </footer>
     <!-- Подключаем jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Подключаем слайдер Slick -->
     <script src="js/partial/slick.min.js"></script>
     <!-- Подключаем файл скриптов -->
     <script src="js/script.min.js"></script>
-	</body>
+  </body>
 </html>
 
 <!-- <!DOCTYPE Liky> -->

@@ -1,0 +1,28 @@
+.news-block__img {
+  display: block;
+  user-select: none;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: $big-tablet-width) {
+    width: 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 240px;
+  }
+}
+
+.news {
+  &:hover {
+    .news-block__img {
+      // width: calc(100% + 10%); ====== ??? ======
+      // height: calc(100% + 10%); ====== ??? ======
+      transform: rotate(4deg);
+    }
+  }
+}
+
+//<!DOCTYPE Liky>

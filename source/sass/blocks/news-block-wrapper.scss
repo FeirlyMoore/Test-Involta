@@ -1,18 +1,13 @@
 .wrapper {
-	@include container();
-  width: 100%;
+  @include container();
+  width: 80%;
   margin-top: 25vh;
   padding: 5em 0 0;
-
-  // @media (min-width: $big-tablet-width) {
-  //   width: 80%;
-  // }
+  margin-bottom: 25vh;
 
   @media (min-width: $big-tablet-width) {
     display: grid;
     width: 80%;
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(auto, 1fr);
     grid-template-columns: repeat(3, 280px);
     justify-content: space-between;
     grid-row-gap: 4em;
@@ -23,7 +18,7 @@
   }
 }
 
-.wrapper>.slick-list>.slick-track {
+.wrapper > .slick-list > .slick-track {
   @include container();
 }
 
@@ -36,19 +31,6 @@
     width: 100%;
     border: 2px solid $special_dark-grey-2;
     box-sizing: border-box;
-  }
-}
-
-.news {
-  width: 240px;
-  overflow: hidden;
-
-  @media (min-width: $big-tablet-width) {
-    width: 280px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 240px;
   }
 }
 

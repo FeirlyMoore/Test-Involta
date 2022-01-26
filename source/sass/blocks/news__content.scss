@@ -1,0 +1,8 @@
+.news__content {
+  @extend %article-components;
+  font-family: "$font-stack--NotoSerif-Regular";
+  font-size: 1.4em;
+  color: lighten($black-color, 50%);
+}
+
+//<!DOCTYPE Liky>
