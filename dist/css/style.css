@@ -421,12 +421,14 @@ template {
 .news {
   position: relative;
   display: flex;
+  min-width: 0;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 320px;
   bottom: 0;
   margin-right: 2em;
+  margin-bottom: 2em;
   transition: opacity 0.2s, bottom 0.5s;
   opacity: 1;
   cursor: pointer; }
