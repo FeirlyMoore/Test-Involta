@@ -494,7 +494,8 @@ template {
 
 .news-block__img {
   display: block;
-  user-select: none; }
+  user-select: none;
+  transition: transform 0.2s; }
   @media (max-width: 320px) {
     .news-block__img {
       width: 280px; } }
