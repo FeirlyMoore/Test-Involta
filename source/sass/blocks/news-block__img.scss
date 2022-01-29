@@ -2,6 +2,10 @@
   display: block;
   user-select: none;
 
+  @media (max-width: $mobile-width) {
+    width: 280px;
+  }
+
   @media (min-width: $tablet-width) {
     width: 300px;
   }
@@ -12,6 +16,14 @@
 
   @media (min-width: $desktop-width) {
     width: 240px;
+  }
+
+  @media (min-width: $average-desktop-width) {
+    width: 280px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    width: 320px;
   }
 }
 

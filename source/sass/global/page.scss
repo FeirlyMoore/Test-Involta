@@ -1,12 +1,12 @@
 ::selection {
-  background-color: rgba(255, 69, 0, 0.8);
+  background-color: #7fc7ff;
+  color: $main-color;
 }
 
 .page {
   min-height: 100%;
   font-size: 10px;
   font-family: "Oswald Regular", "Arial", sans-serif;
-  // line-height: 27px;
 }
 
 .body {
@@ -32,34 +32,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-@media (min-width: $tablet-width) {
-  .mobile-visible {
-    display: none;
-  }
-}
-
-.mobile-only--hidden {
-  display: none;
-
-  @media (min-width: $mobile-width-only) {
-    display: initial;
-  }
-}
-
-@media (max-width: $mobile-width-only), (min-width: $desktop-width-only) {
-  .tablet-visible {
-    display: none;
-  }
-}
-
-.desktop-visible {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: initial;
-  }
 }
 
 //<!DOCTYPE Liky>

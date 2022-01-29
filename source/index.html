@@ -4,7 +4,7 @@
     <!-- Character Sets -->
     <meta charset="utf-8"/>
     <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
@@ -14,14 +14,15 @@
     <meta name="keywords" content="News Module, News, Module"/>
     <!-- Preload && Other -->
     <link rel="preload" href="fonts/Philosopher-Regular.ttf" as="font"/>
+    <link rel="preload" href="fonts/Philosopher-Bold.ttf" as="font"/>
     <link rel="preload" href="fonts/NotoSerif-Regular.ttf" as="font"/>
     <!-- styles && Title -->
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/style.min.css"/>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> -->
     <title>Test-Involta > News Module</title>
   </head>
   <body class="body">
+    <style></style>
     <main class="main">
       <!-- ===== <Контейнер> ===== -->
       <div class="news-block news-block--js wrapper">
@@ -30,7 +31,7 @@
           <picture>
             <source srcset="img/news/news-block__item-1.avif" type="image/avif">
             <source srcset="img/news/news-block__item-1.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -39,7 +40,7 @@
             Конституционное право
           </span>
           <h2 class="news__title">
-            Адвокатов наказали за конфликт в сети
+            Адвокатов наказали<br> за конфликт в сети
           </h2>
           <p class="news__content">
             Одним из новых заместителей Александра Коновалова стал Денис Новак, до последнего времени занимавший должность заместителя директора Департамента экономического законодательства Минюста.
@@ -51,7 +52,7 @@
           <picture>
             <source srcset="img/news/news-block__item-2.avif" type="image/avif">
             <source srcset="img/news/news-block__item-2.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -60,7 +61,7 @@
             Закон и порядок
           </span>
           <h2 class="news__title">
-            Упущены значимые правовые категории
+            Упущены значимые<br> правовые категории
           </h2>
           <p class="news__content">
             Федеральная палата адвокатов оперативно подготовила предложения по изменению УПК РФ во исполнение требований Президента изменить порядок заключения и содержания под стражей предпринимателей
@@ -72,7 +73,7 @@
           <picture>
             <source srcset="img/news/news-block__item-3.avif" type="image/avif">
             <source srcset="img/news/news-block__item-3.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -81,7 +82,7 @@
             Этика общения адвокатов
           </span>
           <h2 class="news__title">
-            Диалог адвокатуры и следствия
+            Диалог адвокатуры<br> и следствия
           </h2>
           <p class="news__content">
             Главное управление МВД столицы обратилось в АП г. Москвы с просьбой организовать явку представителей палаты для проведения обыска в жилище адвоката.
@@ -93,7 +94,7 @@
           <picture>
             <source srcset="img/news/news-block__item-4.avif" type="image/avif">
             <source srcset="img/news/news-block__item-4.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -102,23 +103,19 @@
             Закон и порядок
           </span>
           <h2 class="news__title">
-            Упущены значимые правовые категории
+            Упущены значимые<br> правовые категории
           </h2>
           <p class="news__content">
             Федеральная палата адвокатов оперативно подготовила предложения по изменению УПК РФ во исполнение требований Президента изменить порядок заключения и содержания под стражей предпринимателей
           </p>
           <time class="news__publication-time" datetime="2021-08-26T03:00">26 Августа</time>
         </article>
-        <!--
-            ===============================================================================
-            ===============================================================================
-         -->
         <!-- >========== Блок Статьи ========== -->
-        <article class="news-block__item-1 news">
+        <article class="news-block__item-5 news">
           <picture>
             <source srcset="img/news/news-block__item-1.avif" type="image/avif">
             <source srcset="img/news/news-block__item-1.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -127,7 +124,7 @@
             Конституционное право
           </span>
           <h2 class="news__title">
-            Адвокатов наказали за конфликт в сети
+            Адвокатов наказали<br> за конфликт в сети
           </h2>
           <p class="news__content">
             Одним из новых заместителей Александра Коновалова стал Денис Новак, до последнего времени занимавший должность заместителя директора Департамента экономического законодательства Минюста.
@@ -135,11 +132,11 @@
           <time class="news__publication-time" datetime="2021-08-26T03:00">26 Августа</time>
         </article>
         <!-- >========== Блок Статьи ========== -->
-        <article class="news-block__item-2 news">
+        <article class="news-block__item-6 news">
           <picture>
             <source srcset="img/news/news-block__item-2.avif" type="image/avif">
             <source srcset="img/news/news-block__item-2.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -148,7 +145,7 @@
             Закон и порядок
           </span>
           <h2 class="news__title">
-            Упущены значимые правовые категории
+            Упущены значимые<br> правовые категории
           </h2>
           <p class="news__content">
             Федеральная палата адвокатов оперативно подготовила предложения по изменению УПК РФ во исполнение требований Президента изменить порядок заключения и содержания под стражей предпринимателей
@@ -156,11 +153,11 @@
           <time class="news__publication-time" datetime="2021-08-26T03:00">26 Августа</time>
         </article>
         <!-- >========== Блок Статьи ========== -->
-        <article class="news-block__item-3 news">
+        <article class="news-block__item-7 news">
           <picture>
             <source srcset="img/news/news-block__item-3.avif" type="image/avif">
             <source srcset="img/news/news-block__item-3.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -169,7 +166,7 @@
             Этика общения адвокатов
           </span>
           <h2 class="news__title">
-            Диалог адвокатуры и следствия
+            Диалог адвокатуры<br> и следствия
           </h2>
           <p class="news__content">
             Главное управление МВД столицы обратилось в АП г. Москвы с просьбой организовать явку представителей палаты для проведения обыска в жилище адвоката.
@@ -177,11 +174,11 @@
           <time class="news__publication-time" datetime="2021-08-26T03:00">26 Августа</time>
         </article>
         <!-- >========== Блок Статьи ========== -->
-        <article class="news-block__item-4 news">
+        <article class="news-block__item-8 news">
           <picture>
             <source srcset="img/news/news-block__item-4.avif" type="image/avif">
             <source srcset="img/news/news-block__item-4.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -190,23 +187,19 @@
             Закон и порядок
           </span>
           <h2 class="news__title">
-            Упущены значимые правовые категории
+            Упущены значимые<br> правовые категории
           </h2>
           <p class="news__content">
             Федеральная палата адвокатов оперативно подготовила предложения по изменению УПК РФ во исполнение требований Президента изменить порядок заключения и содержания под стражей предпринимателей
           </p>
           <time class="news__publication-time" datetime="2021-08-26T03:00">26 Августа</time>
         </article>
-        <!--
-            ===============================================================================
-            ===============================================================================
-         -->
         <!-- >========== Блок Статьи ========== -->
-        <article class="news-block__item-1 news">
+        <article class="news-block__item-9 news">
           <picture>
             <source srcset="img/news/news-block__item-1.avif" type="image/avif">
             <source srcset="img/news/news-block__item-1.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-1.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -215,7 +208,7 @@
             Конституционное право
           </span>
           <h2 class="news__title">
-            Адвокатов наказали за конфликт в сети
+            Адвокатов наказали<br> за конфликт в сети
           </h2>
           <p class="news__content">
             Одним из новых заместителей Александра Коновалова стал Денис Новак, до последнего времени занимавший должность заместителя директора Департамента экономического законодательства Минюста.
@@ -223,11 +216,11 @@
           <time class="news__publication-time" datetime="2021-08-26T03:00">26 Августа</time>
         </article>
         <!-- >========== Блок Статьи ========== -->
-        <article class="news-block__item-2 news">
+        <article class="news-block__item-10 news">
           <picture>
             <source srcset="img/news/news-block__item-2.avif" type="image/avif">
             <source srcset="img/news/news-block__item-2.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-2.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -236,7 +229,7 @@
             Закон и порядок
           </span>
           <h2 class="news__title">
-            Упущены значимые правовые категории
+            Упущены значимые<br> правовые категории
           </h2>
           <p class="news__content">
             Федеральная палата адвокатов оперативно подготовила предложения по изменению УПК РФ во исполнение требований Президента изменить порядок заключения и содержания под стражей предпринимателей
@@ -244,11 +237,11 @@
           <time class="news__publication-time" datetime="2021-08-26T03:00">26 Августа</time>
         </article>
         <!-- >========== Блок Статьи ========== -->
-        <article class="news-block__item-3 news">
+        <article class="news-block__item-11 news">
           <picture>
             <source srcset="img/news/news-block__item-3.avif" type="image/avif">
             <source srcset="img/news/news-block__item-3.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-3.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -257,7 +250,7 @@
             Этика общения адвокатов
           </span>
           <h2 class="news__title">
-            Диалог адвокатуры и следствия
+            Диалог адвокатуры<br> и следствия
           </h2>
           <p class="news__content">
             Главное управление МВД столицы обратилось в АП г. Москвы с просьбой организовать явку представителей палаты для проведения обыска в жилище адвоката.
@@ -265,11 +258,11 @@
           <time class="news__publication-time" datetime="2021-08-26T03:00">26 Августа</time>
         </article>
         <!-- >========== Блок Статьи ========== -->
-        <article class="news-block__item-4 news">
+        <article class="news-block__item-12 news">
           <picture>
             <source srcset="img/news/news-block__item-4.avif" type="image/avif">
             <source srcset="img/news/news-block__item-4.webp" type="image/webp">
-            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" heigth="234" decoding="async" loading="lazy" alt="Здания">
+            <img class="news-block__img" src="img/news/news-block__item-4.png" width="320" decoding="async" loading="lazy" alt="Здания">
           </picture>
           <span class="news__section">
             <svg class="deco-img" width="17" height="21" aria-label="Slim cat">
@@ -278,7 +271,7 @@
             Закон и порядок
           </span>
           <h2 class="news__title">
-            Упущены значимые правовые категории
+            Упущены значимые<br> правовые категории
           </h2>
           <p class="news__content">
             Федеральная палата адвокатов оперативно подготовила предложения по изменению УПК РФ во исполнение требований Президента изменить порядок заключения и содержания под стражей предпринимателей
@@ -288,14 +281,10 @@
       </div>
       <!-- ===== </Контейнер> ===== -->
     </main>
-    <footer class="footer">
-
-    </footer>
     <!-- Подключаем jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Подключаем слайдер Slick -->
     <script src="js/partial/slick.min.js"></script>
-    <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
     <!-- Подключаем файл скриптов -->
     <script src="js/script.min.js"></script>
   </body>

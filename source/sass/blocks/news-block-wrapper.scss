@@ -16,6 +16,14 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 240px);
   }
+
+  @media (min-width: $average-desktop-width) {
+    grid-template-columns: repeat(4, 280px);
+  }
+
+  @media (min-width: $big-desktop-width) {
+    grid-template-columns: repeat(4, 320px);
+  }
 }
 
 .wrapper > .slick-list > .slick-track {
