@@ -1,20 +1,28 @@
-window.addEventListener('resize', function(event) { // Функция, отслеживающая изменение размера окна
-  let InnerWidth = window.innerWidth; // Получаем размер окна
+// Функция, отслеживающая изменение размера окна
+window.addEventListener('resize', function(event) {
+  // Получаем размер окна
+  let InnerWidth = window.innerWidth;
 
+  // Запускаем функцию при размере окна меньшем, чем 1040 пикселов
   if (InnerWidth < 1040) {
-    sliderInitialization(); // Запускаем функцию при размере окна меньшем, чем 1040 пикселов
+    sliderInitialization(); 
+    // Запускаем функцию при размере окна большем, чем 1040 пикселов
   } else if (InnerWidth > 1040) {
-    // HiddenNewsComponent(); // Запускаем функцию при размере окна большем, чем 1040 пикселов
+    // HiddenNewsComponent(); 
   }
 
 }, true);
 
-let InnerWidth = window.innerWidth; // Получаем размер окна
+// Получаем размер окна
+let InnerWidth = window.innerWidth; 
 
-document.addEventListener("DOMContentLoaded", sliderInitialization); // Запускаем функцию при загрузке страницы
-// document.addEventListener("DOMContentLoaded", HiddenNewsComponent); // Запускаем функцию при загрузке страницы
+// Запускаем функцию при загрузке страницы
+document.addEventListener("DOMContentLoaded", sliderInitialization); 
+// Запускаем функцию при загрузке страницы
+// document.addEventListener("DOMContentLoaded", HiddenNewsComponent); 
 
-function sliderInitialization() { // Инициализация слайдера
+// Инициализация слайдера
+function sliderInitialization() { 
   // Настройки слайдера
   $('.news-block--js').slick({
     arrows: false,
@@ -51,21 +59,14 @@ function HiddenNewsComponent() {
   let NewsCount = document.querySelectorAll('.news');
   let NewsLength = NewsCount.length;
 
-  // console.log(NewsLength);
-
   // Проверяем наличие длины у массива элементов, и наличие элементов соответственно
   if (NewsLength !== undefined || NewsLength !== NaN || NewsLength !== 0) { 
     // Пропускаем массив элементов через цикл 
     for (let i = 0; i <= NewsLength - 1; i++) {
-      // console.log(i);
-      // Присваиваем переменной булевое значение, показывающее наличие или отсутствия класса
-      let NewsClassContain = NewsCount[i].classList.contains(`news-block__item-${i + 1}`);
-      console.log(NewsClassContain);
       // Проверяем наличие класса у элемента, если его нет - то он будет добавлен в альтернативной ветви
-      if (NewsClassContain){ 
+      if (NewsCount[i].classList.contains(`news-block__item-${i + 1}`)){ 
         // Все элементы массива после девятого скрываем, при условии - что ширина окна больше 1040 и меньше 1200
         if (i >= 9 && InnerWidth >= 1040 && InnerWidth < 1200) {
-          console.log(InnerWidth);
           // Скрываем элементы
           console.log(i);
           NewsCount[i].classList.add(`hidden`);
