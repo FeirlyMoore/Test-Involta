@@ -39,7 +39,9 @@ function sliderInitialization() {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            variableWidth: true
+            variableWidth: true,
+            autoplay: true,
+            autoplaySpeed: 10000
           }
         },
         // При разрешении до 767 пикселов
@@ -48,7 +50,9 @@ function sliderInitialization() {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            variableWidth: true
+            variableWidth: true,
+            autoplay: true,
+            autoplaySpeed: 10000
           }
         },
     ]
@@ -63,22 +67,35 @@ function HiddenNewsComponent() {
   if (NewsLength !== undefined || NewsLength !== NaN || NewsLength !== 0) { 
     // Пропускаем массив элементов через цикл 
     for (let i = 0; i <= NewsLength - 1; i++) {
-      // Проверяем наличие класса у элемента, если его нет - то он будет добавлен в альтернативной ветви
-      if (NewsCount[i].classList.contains(`news-block__item-${i + 1}`)){ 
-        // Все элементы массива после девятого скрываем, при условии - что ширина окна больше 1040 и меньше 1200
-        if (i >= 9 && InnerWidth >= 1040 && InnerWidth < 1200) {
-          // Скрываем элементы
-          console.log(i);
-          NewsCount[i].classList.add(`hidden`);
-        } else {
-          // Обличаем элементы
-          NewsCount[i].classList.remove(`hidden`);
-        }
-        // Добавляем класс блоку
-      } else NewsCount[i].classList.add(`news-block__item-${i + 1}`);
+      // !!! Попробовать реализовать через стили
     }
   }
 }
+
+// function HiddenNewsComponent() {
+//   let NewsCount = document.querySelectorAll('.news');
+//   let NewsLength = NewsCount.length;
+
+//   // Проверяем наличие длины у массива элементов, и наличие элементов соответственно
+//   if (NewsLength !== undefined || NewsLength !== NaN || NewsLength !== 0) {
+//     // Пропускаем массив элементов через цикл
+//     for (let i = 0; i <= NewsLength - 1; i++) {
+//       // Проверяем наличие класса у элемента, если его нет - то он будет добавлен в альтернативной ветви
+//       if (NewsCount[i].classList.contains(`news-block__item-${i + 1}`)){
+//         // Все элементы массива после девятого скрываем, при условии - что ширина окна больше 1040 и меньше 1200
+//         if (i >= 9 && InnerWidth >= 1040 && InnerWidth < 1200) {
+//           // Скрываем элементы
+//           console.log(i);
+//           NewsCount[i].classList.add(`hidden`);
+//         } else {
+//           // Обличаем элементы
+//           NewsCount[i].classList.remove(`hidden`);
+//         }
+//         // Добавляем класс блоку
+//       } else NewsCount[i].classList.add(`news-block__item-${i + 1}`);
+//     }
+//   }
+// }
 
 let style = document.querySelector('style');
 let NewsCount = document.querySelectorAll('.news');
