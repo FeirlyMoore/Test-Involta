@@ -346,15 +346,6 @@ template {
   display: flex;
   align-items: flex-start; }
 
-/* Слайд */
-/* Слайд активный */
-/* Слайд основной */
-/* Слайд по центру */
-/* Стрелка */
-/* Стрелка влево */
-/* Стрелка вправо */
-/* Стрелка не активная */
-/* Точки */
 /* Конкретный слайдер */
 .slider {
   position: relative;
@@ -377,7 +368,7 @@ template {
   color: #000000; }
 
 .hidden {
-  display: none; }
+  display: none !important; }
 
 .visually-hidden {
   position: absolute;
@@ -483,7 +474,7 @@ template {
 
 @media (min-width: 1200px) {
   .news-block__item-10 {
-    display: block; } }
+    display: flex; } }
 
 @media (min-width: 1040px) {
   .news-block__item-11 {
@@ -491,7 +482,7 @@ template {
 
 @media (min-width: 1200px) {
   .news-block__item-11 {
-    display: block; } }
+    display: flex; } }
 
 @media (min-width: 1040px) {
   .news-block__item-12 {
@@ -499,7 +490,7 @@ template {
 
 @media (min-width: 1200px) {
   .news-block__item-12 {
-    display: block; } }
+    display: flex; } }
 
 .news-block__img {
   display: block;

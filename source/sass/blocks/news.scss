@@ -56,17 +56,17 @@
 $block-number: 13;
 
 @for $i from 1 to $block-number {
-  .news-block__item-#{$i} {
-    @if $i > 9 {
-      @media (min-width: $big-tablet-width) {
-        display: none;
-      }
+ .news-block__item-#{$i} {
+   @if $i > 9 { 
+     @media (min-width: $big-tablet-width) {
+       display: none;
+     }
 
-      @media (min-width: $desktop-width) {
-        display: block;
-      }
-    }
-  }
+     @media (min-width: $desktop-width) {
+       display: flex;
+     }
+   }
+ }
 }
 
 //<!DOCTYPE Liky>
