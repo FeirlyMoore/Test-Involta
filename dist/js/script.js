@@ -63,7 +63,7 @@ function sliderInitialization() {
   });
 }
 
-// Скрывает все елементы, кроме первых девяти
+// Скрывает все елементы, кроме указанного количества
 function HiddenNewsComponent() {
   // Проверяем наличие длины у массива элементов, и наличие элементов соответственно
   if (newsLength !== undefined || newsLength !== NaN || newsLength !== 0) { 
