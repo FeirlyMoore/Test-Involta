@@ -10,16 +10,23 @@ window.addEventListener('resize', function(event) {
   } else if (InnerWidth > 1040) {
     // HiddenNewsComponent(); 
   }
-
 }, true);
 
 // Получаем размер окна
 let InnerWidth = window.innerWidth; 
+// Получаем элемент <style>
+let style = document.querySelector('style');
+// Получаем все элементы с классом "news"
+let news = document.querySelectorAll('.news');
+// Получаем количество элементов news
+let newsLength = news.length;
+// Количество блоков, которые надо оставить видимыми. 
+let visibleBlockCount = 9;
 
 // Запускаем функцию при загрузке страницы
 document.addEventListener("DOMContentLoaded", sliderInitialization); 
 // Запускаем функцию при загрузке страницы
-// document.addEventListener("DOMContentLoaded", HiddenNewsComponent); 
+document.addEventListener("DOMContentLoaded", HiddenNewsComponent); 
 
 // Инициализация слайдера
 function sliderInitialization() { 
@@ -59,52 +66,43 @@ function sliderInitialization() {
   });
 }
 
+// Скрывает все елементы, кроме первых девяти
 function HiddenNewsComponent() {
-  let NewsCount = document.querySelectorAll('.news');
-  let NewsLength = NewsCount.length;
-
   // Проверяем наличие длины у массива элементов, и наличие элементов соответственно
-  if (NewsLength !== undefined || NewsLength !== NaN || NewsLength !== 0) { 
-    // Пропускаем массив элементов через цикл 
-    for (let i = 0; i <= NewsLength - 1; i++) {
-      // !!! Попробовать реализовать через стили
+  if (newsLength !== undefined || newsLength !== NaN || newsLength !== 0) { 
+    // Регистрируем все элементы, раздаём им классы с порядковым номером
+    RegisteringNewComponent();
+
+    // Скрываем блоки
+    for (let i = visibleBlockCount; i <= newsLength - 1; i++) {
+      let j = i + 1;
+      style.innerHTML+= `
+        @media (min-width: 1040px) {
+          .news-block__item-${j} {
+            display: none;
+          }
+        }
+
+        @media (min-width: 1200px) {
+          .news-block__item-${j} {
+            display: flex;
+          }
+        }
+        `;
     }
   }
 }
 
-// function HiddenNewsComponent() {
-//   let NewsCount = document.querySelectorAll('.news');
-//   let NewsLength = NewsCount.length;
-
-//   // Проверяем наличие длины у массива элементов, и наличие элементов соответственно
-//   if (NewsLength !== undefined || NewsLength !== NaN || NewsLength !== 0) {
-//     // Пропускаем массив элементов через цикл
-//     for (let i = 0; i <= NewsLength - 1; i++) {
-//       // Проверяем наличие класса у элемента, если его нет - то он будет добавлен в альтернативной ветви
-//       if (NewsCount[i].classList.contains(`news-block__item-${i + 1}`)){
-//         // Все элементы массива после девятого скрываем, при условии - что ширина окна больше 1040 и меньше 1200
-//         if (i >= 9 && InnerWidth >= 1040 && InnerWidth < 1200) {
-//           // Скрываем элементы
-//           console.log(i);
-//           NewsCount[i].classList.add(`hidden`);
-//         } else {
-//           // Обличаем элементы
-//           NewsCount[i].classList.remove(`hidden`);
-//         }
-//         // Добавляем класс блоку
-//       } else NewsCount[i].classList.add(`news-block__item-${i + 1}`);
-//     }
-//   }
-// }
-
-let style = document.querySelector('style');
-let NewsCount = document.querySelectorAll('.news');
-// перекидываю... Ох, только сейчас понял, что SCSS скомпилируется раньше, чем инициализируется переменная. )))
-// Ахахах, да, идея была неплохая, надо будет взять на вооружение.
-style.innerHTML+= `
-:root {
-  --news-count: ${NewsCount.length};
+// Регистрирует все новостные блоки, добовляя каждому класс с порядковым номером
+function RegisteringNewComponent() {
+  for (let i = 0; i <= newsLength - 1; i++) {
+    // Вспомогательная переменная
+    let j = i + 1;
+    // Проверяем наличие класса у элемента
+    if (news[i].classList.contains(`news-block__item-${j}`)) continue;
+    // добавляем класс элементу, если раньше его не было
+    else news[i].classList.add(`news-block__item-${j}`);
+  }
 }
-`;
 
 //<!DOCTYPE Liky>

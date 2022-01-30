@@ -468,30 +468,6 @@ template {
     .news {
       width: 320px; } }
 
-@media (min-width: 1040px) {
-  .news-block__item-10 {
-    display: none; } }
-
-@media (min-width: 1200px) {
-  .news-block__item-10 {
-    display: flex; } }
-
-@media (min-width: 1040px) {
-  .news-block__item-11 {
-    display: none; } }
-
-@media (min-width: 1200px) {
-  .news-block__item-11 {
-    display: flex; } }
-
-@media (min-width: 1040px) {
-  .news-block__item-12 {
-    display: none; } }
-
-@media (min-width: 1200px) {
-  .news-block__item-12 {
-    display: flex; } }
-
 .news-block__img {
   display: block;
   user-select: none;
