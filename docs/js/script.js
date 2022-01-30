@@ -23,7 +23,7 @@ let visibleBlockCount = 9;
 // Запускаем функцию при загрузке страницы
 document.addEventListener("DOMContentLoaded", sliderInitialization); 
 // Запускаем функцию при загрузке страницы
-document.addEventListener("DOMContentLoaded", HiddenNewsComponent); 
+document.addEventListener("DOMContentLoaded", HideNewsComponent); 
 
 // Инициализация слайдера
 function sliderInitialization() { 
@@ -64,7 +64,7 @@ function sliderInitialization() {
 }
 
 // Скрывает все елементы, кроме указанного количества
-function HiddenNewsComponent() {
+function HideNewsComponent() {
   // Проверяем наличие длины у массива элементов, и наличие элементов соответственно
   if (newsLength !== undefined || newsLength !== NaN || newsLength !== 0) { 
     // Регистрируем все элементы, раздаём им классы с порядковым номером
