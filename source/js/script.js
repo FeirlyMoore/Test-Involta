@@ -6,9 +6,6 @@ window.addEventListener('resize', function(event) {
   // Запускаем функцию при размере окна меньшем, чем 1040 пикселов
   if (InnerWidth < 1040) {
     sliderInitialization(); 
-    // Запускаем функцию при размере окна большем, чем 1040 пикселов
-  } else if (InnerWidth > 1040) {
-    // HiddenNewsComponent(); 
   }
 }, true);
 
