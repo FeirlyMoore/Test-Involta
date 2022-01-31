@@ -492,7 +492,7 @@ template {
       width: 320px; } }
 
 .news:hover .news-block__img {
-  width: +110%;
+  width: 110%;
   transform: rotate(4deg); }
 
 .news__section {
