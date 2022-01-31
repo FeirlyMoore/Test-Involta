@@ -1,14 +1,3 @@
-// Функция, отслеживающая изменение размера окна
-window.addEventListener('resize', function(event) {
-  // Получаем размер окна
-  let InnerWidth = window.innerWidth;
-
-  // Запускаем функцию при размере окна меньшем, чем 1040 пикселов
-  if (InnerWidth < 1040) {
-    sliderInitialization(); 
-  }
-}, true);
-
 // Получаем размер окна
 let InnerWidth = window.innerWidth; 
 // Получаем элемент <style>
@@ -19,6 +8,17 @@ let news = document.querySelectorAll('.news');
 let newsLength = news.length;
 // Количество блоков, которые надо оставить видимыми. 
 let visibleBlockCount = 9;
+
+// Вызываем и обновляем слайдер при изменении размера окна
+window.addEventListener('resize', function(event) {
+  // Получаем размер окна
+  let InnerWidth = window.innerWidth;
+
+  // Запускаем функцию при размере окна меньшем, чем 1040 пикселов
+  if (InnerWidth < 1040) {
+    sliderInitialization(); 
+  }
+}, true);
 
 // Запускаем функцию при загрузке страницы
 document.addEventListener("DOMContentLoaded", sliderInitialization); 
