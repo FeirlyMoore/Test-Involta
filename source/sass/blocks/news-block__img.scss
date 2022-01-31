@@ -1,7 +1,7 @@
 .news-block__img {
   display: block;
   user-select: none;
-  transition: transform 0.2s;
+  transition: transform 0.2s, width 0.2s;
 
   @media (max-width: $mobile-width) {
     width: 280px;
@@ -31,8 +31,7 @@
 .news {
   &:hover {
     .news-block__img {
-      // width: calc(100% + 10%); ====== ??? ======
-      // height: calc(100% + 10%); ====== ??? ======
+      width: +110%; // Как по мне - это излишек. 
       transform: rotate(4deg);
     }
   }
