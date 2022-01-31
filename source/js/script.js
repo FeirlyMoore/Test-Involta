@@ -1,5 +1,3 @@
-// Получаем размер окна
-let InnerWidth = window.innerWidth; 
 // Получаем элемент <style>
 let style = document.querySelector('style');
 // Получаем все элементы с классом "news"
@@ -12,21 +10,21 @@ let visibleBlockCount = 9;
 // Вызываем и обновляем слайдер при изменении размера окна
 window.addEventListener('resize', function(event) {
   // Получаем размер окна
-  let InnerWidth = window.innerWidth;
+  let innerWidth = window.innerWidth;
 
   // Запускаем функцию при размере окна меньшем, чем 1040 пикселов
-  if (InnerWidth < 1040) {
-    sliderInitialization(); 
+  if (innerWidth < 1040) {
+    SliderInitialization();
   }
 }, true);
 
 // Запускаем функцию при загрузке страницы
-document.addEventListener("DOMContentLoaded", sliderInitialization); 
+document.addEventListener("DOMContentLoaded", SliderInitialization);
 // Запускаем функцию при загрузке страницы
 document.addEventListener("DOMContentLoaded", HideNewsComponent); 
 
 // Инициализация слайдера
-function sliderInitialization() { 
+function SliderInitialization() {
   // Настройки слайдера
   $('.news-block--js').slick({
     arrows: false,
